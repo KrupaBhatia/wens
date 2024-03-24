@@ -1,0 +1,37 @@
+<div class="auth-container">
+    <div *ngIf="showLoginForm" class="login-form">
+      <h2>Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" formControlName="password">
+        </div>
+        <button type="submit">Login</button>
+        <p (click)="toggleForms()">Don't have an account? Sign up here.</p>
+      </form>
+    </div>
+    <div *ngIf="!showLoginForm" class="signup-form">
+      <h2>Sign Up</h2>
+      <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" formControlName="name">
+          </div>
+        <div class="form-group">
+          <label for="signupEmail">Email:</label>
+          <input type="email" id="signupEmail" formControlName="signupEmail">
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password:</label>
+          <input type="password" id="signupPassword" formControlName="signupPassword">
+        </div>
+        <button type="submit">Sign Up</button>
+        <p (click)="toggleForms()">Already have an account? Login here.</p>
+      </form>
+    </div>
+  </div>
+  

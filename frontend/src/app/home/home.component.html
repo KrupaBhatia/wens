@@ -1,0 +1,32 @@
+
+<div class="create-blog-button">
+    <button class="btn-create-new" (click)="createNewBlog()">Create New Blog</button>
+  </div>
+
+<div *ngFor="let blog of blogs" class="blog-item">
+    <h3 class="blog-title">{{ blog.title }}</h3>
+    <p class="blog-body">{{ blog.body }}</p>
+    <div class="blog-meta">
+      <p class="blog-category">Category: {{ blog.category }}</p>
+      <p class="blog-tags">Tags: {{ blog.tags }}</p>
+      <div class="author-details">
+        <h4>Author Details:</h4>
+        <p>{{ blog.author_Id.name }}</p>
+        <p>{{ blog.author_Id.email }}</p>
+      </div>
+    </div>
+    <div class="blog-actions">
+      <button class="btn-update">Update</button>
+      <button class="btn-delete" (click)="showDialog()">Delete</button>
+    </div>
+  </div>
+  
+
+  <div> 
+  
+<p-dialog header=" Are you sure u want to delete ? " [(visible)]="visible" [style]="{width: '50vw'}">
+    
+        <p-button  label="delete" click="delteblog()"></p-button>
+
+</p-dialog>
+    </div>
