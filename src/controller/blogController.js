@@ -16,7 +16,7 @@ const blogs = async function (req, res) {
   
       if (!data.body ||typeof data.body!=="string") return res.status(400).send({ status: false, msg: "body is Required" })
   
-      if (!/^[A-Za-z][^\.:]*[\.:]$/.test(data.body)) return res.status(400).send({ status: false, msg: "Body isnot in right format" })
+      // if (!/^[A-Za-z][^\.:]*[\.:]$/.test(data.body)) return res.status(400).send({ status: false, msg: "Body isnot in right format" })
   
       if (!data.author_Id ||typeof data.author_Id!=="string") return res.status(400).send({ status: false, msg: "AuthorId is Required" })
   

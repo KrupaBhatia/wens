@@ -1,51 +1,110 @@
-.blog-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+.create-blog-button {
     margin-bottom: 20px;
   }
   
-  .blog-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .blog-body {
-    margin-bottom: 15px;
-  }
-  
-  .blog-meta {
-    margin-bottom: 15px;
-  }
-  
-  .blog-category, .blog-tags {
-    margin-bottom: 5px;
-  }
-  
-  .author-details {
-    margin-bottom: 15px;
-  }
-  
-  .blog-actions {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .btn-update, .btn-delete, .btn-create-new {
-    padding: 8px 20px;
+  .btn-create-new {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
     cursor: pointer;
   }
   
-  .btn-update:hover, .btn-delete:hover, .btn-create-new:hover {
-    background-color: #0056b3;
+  .error-message {
+    color: #FF0000; /* Red color for error messages */
+    font-weight: bold;
   }
   
-  .create-blog-button {
+  .blog-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .blog-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .blog-body {
+    font-size: 16px;
+  }
+  
+  .blog-meta {
     margin-top: 10px;
+  }
+  
+  .blog-category, .blog-tags {
+    font-style: italic;
+  }
+  
+  .author-details {
+    margin-top: 10px;
+  }
+  
+  .blog-actions {
+    margin-top: 10px;
+  }
+  
+  .btn-update, .btn-delete {
+    background-color: #008CBA;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .update-form {
+    margin-top: 20px;
+  }
+  
+  .update-form .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .update-form label {
+    font-weight: bold;
+  }
+  
+  .update-form input[type="text"],
+  .update-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .update-form button[type="submit"],
+  .update-form button[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .update-form button[type="button"]:hover,
+  .update-form button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .p-dialog-header {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+  }
+  
+  .p-dialog-content {
+    padding: 20px;
+  }
+  
+  .p-dialog-footer {
+    padding: 10px 20px;
+    text-align: right;
   }
   

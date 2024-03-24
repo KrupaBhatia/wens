@@ -1,5 +1,4 @@
 const author = require("../models/authorModel");
-// const token = require("../model/tokenModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
@@ -72,10 +71,10 @@ const authorLogin = async function (req, res) {
             author_Id: authorData._id.toString(),
           },
           ENV.SECRETE_KEY, 
-          { expiresIn: '15m' } 
+          { expiresIn: '160m' } 
         );
   
-        res.status(201).send({ status: true, accessToken: accessToken, email: email, message: "Login successful." });
+        res.status(201).send({ status: true, accessToken: accessToken,author_Id :authorData._id, message: "Login successful." });
       } else {
         return res.status(400).send({ status: false, message: "Login failed. Password is incorrect." });
       }

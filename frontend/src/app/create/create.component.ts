@@ -15,6 +15,12 @@ export class CreateComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private blogService: ServiceService,private router: Router) { }
 
+
+  
+  home() {
+    this.router.navigate(['/home']);
+  } 
+
   ngOnInit(): void {
 
     const authorId = localStorage.getItem('id') || '';
@@ -45,4 +51,5 @@ export class CreateComponent implements OnInit {
       console.error('Form is invalid. Cannot submit.');
     }
   }
+
 }  

@@ -7,11 +7,11 @@ const { connectDB } = require("./src/config/connection");
 const { ENV } = require("./src/config/env");
 const port = ENV.API_PORT;
 const router = require("./src/routes/routes")
-
+const cors = require("cors")
 
 app.use(bodyParser.json());
 
-
+app.use(cors());
 app.use('/', router);
 
 

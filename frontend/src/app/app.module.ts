@@ -13,6 +13,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CreateComponent } from './create/create.component';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { ButtonModule } from 'primeng/button';
     HttpClientModule,
     ReactiveFormsModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    ToastModule,
+    MessagesModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
